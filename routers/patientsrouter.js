@@ -7,6 +7,12 @@ const router=express.Router()
 router.use(express.urlencoded({extended: false}))
 router.use(express.json())
 
+const tablify=(data)=>{
+    return (`<tr><td>${data.name}</td><td>${data.age}</td><td>${data.height}</td><td>${data.weight}</td><td>${data.bmi}</td></tr>`)
+
+}
+
+
 router.get("/", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "../Pages/homepage.html"))
     
@@ -30,14 +36,18 @@ router.post("/BMI", async(req, res)=>{
 
 router.get("/database", async (req, res)=>{
     let data=await patient.find({})
+    const top=`<table><thead><tr><td>NAME</td><td>AGE</td><td>HEIGHT</td><td>WEIGHT</td><td>BMI</td></tr></thead>`
     let msg=""
-    let output= data.map((person, index)=>{
-        let singleMsg= `<h1>${person.name} is ${person.age} years old, is ${person.height}m tall, weighs ${person.weight}kg and has a BMI of ${person.bmi} \n</h1>`
+    const bottom="</table>"
+    const out=data.map((person, index)=>{
+        let singleMsg=tablify(person) 
         msg=msg+singleMsg
     })
 
+    const output= top + msg + bottom
+
     
-    res.send(msg)
+    res.send(output)
 
 })
 
@@ -46,9 +56,12 @@ router.get("/find", (req, res)=>{
 })
 
 router.post("/find", async (req, res)=>{
+    const top=`<table><thead><tr><td>NAME</td><td>AGE</td><td>HEIGHT</td><td>WEIGHT</td><td>BMI</td></tr></thead>`
+    const bottom=`</table>`
     let data=await patient.findOne({name: req.body.search})
     if(!data){return res.send("Item you are looking for is not in the database")}
-    let output= `<h1>The patient is  ${data.name}  \n aged: ${data.age}   \n  weight:  ${data.weight}kg  \n  height: ${data.height}m`
+    const msg=tablify(data)
+    const output=top+msg+bottom 
     res.send(output)
     
 
