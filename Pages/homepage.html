@@ -1,22 +1,25 @@
 <html>
     <head>
         <title>BMI Homepage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     </head>
     <body>
-    <h1>THIS IS THE BMI CALCULATOR HOMEPAGE</h1>
+    <div class="container">    
+    <h1 class="page-header text-center bg-primary">THIS IS THE BMI CALCULATOR HOMEPAGE</h1>
     <form action="/BMI" method="get">
-        <input type="submit" value="Click HERE TO CALCULATE BMI">
+        <div class="text-center"><input type="submit" value="Click HERE TO CALCULATE BMI" class="btn btn-primary btn-lg"></div>
     </form>
     <form action="/database" method="get">
-        <input type="submit" value="Click HERE TO PRINT DATABASE">
+        <div class="text-center"><input type="submit" value="Click HERE TO PRINT DATABASE" class="btn btn-primary btn-lg" target="_blank"></div>
     </form>
     <form action="/find" method="get">
-        <input type="submit" value="Click HERE TO FIND PERSON IN DATABASE">
+        <div class="text-center"><input type="submit" value="Click HERE TO FIND PERSON IN DATABASE" class="btn btn-primary btn-lg"></div>
     </form>
     <form action="/delete" method="get">
-        <input type="submit" value="Click HERE TO DELETE PERSON FROM DATABASE">
+        <div class="text-center"><input type="submit" value="Click HERE TO DELETE PERSON FROM DATABASE" class="btn btn-primary btn-lg"></div>
     </form>
-    
+    </div>
     </body>
 </html>

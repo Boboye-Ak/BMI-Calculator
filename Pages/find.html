@@ -1,12 +1,17 @@
 <html>
     <head>
         <title>Find Person Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     </head>
     <body>
-    <h1>THIS IS THE FIND PERSON PAGE</h1>
+    <div class="container">   
+    <h1 class="page-header text-center bg-primary">THIS IS THE FIND PERSON PAGE</h1>
     <form action="/find" method="post" target="_blank">
-        <label for="search">Enter Name of who you're searching for</label><input type="text" name="search">
-        <input type="submit" value="SEARCH" ></br>
+        <div class="text-center"><label for="search">Enter Name of who you're searching for:</label><input type="text" name="search">
+        <div class="btn btn-primary btn-lg"><input type="submit" value="SEARCH" ></div>
+    </div>
+    </div>
     </body>
 </html>

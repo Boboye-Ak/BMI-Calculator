@@ -1,12 +1,18 @@
 <html>
     <head>
         <title>Delete Person Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     </head>
     <body>
-    <h1>THIS IS THE DELETE PERSON PAGE</h1>
+    <div class="container">  
+    <h1 class="page-header text-center bg-primary">THIS IS THE DELETE PERSON PAGE</h1>
     <form action="/delete" method="post" target="_blank">
-        <label for="delete">Enter Name of who you want to delete: </label><input type="text" name="delete">
-        <input type="submit" value="DELETE" ></br>
+        <div class="text-center"><label for="delete">Enter Name of who you want to delete: </label><input type="text" name="delete">
+        <input type="submit" class="btn btn-primary btn-lg" value="DELETE" ></br>
+        </div>
+    </div>
+    
     </body>
 </html>

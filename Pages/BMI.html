@@ -1,16 +1,22 @@
 <html>
     <head>
         <title>BMI Homepage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     </head>
     <body>
-    <h1>THIS IS THE BMI CALCULATOR</h1></br>
+    <div class="container">   
+    <h1 class="page-header text-center bg-primary">THIS IS THE BMI CALCULATOR</h1></br>
+    <div class="form-group">
     <form action="/BMI" method="post" target="_blank">
-        <label for="name">Name</label><input type="text" name="name" ></br>
-        <label for="age">Age</label><input type="number" name="age" ></br>
-        <label for="height in Metres: ">Height</label><input type="text" name="height" ></br>
-        <label for="weight in KG: ">Weight</label><input type="text" name="weight" ></br>
-        <input type="submit" value="CALCULATE" ></br>
+<div class="text-center"><label for="name">Name:</label><input type="text" name="name" ></br>
+        <label for="age">Age:</label><input type="number" name="age" ></br>
+        <label for="height">Height(m):</label><input type="text" name="height" ></br>
+        <label for="weight: ">Weight(kg):</label><input type="text" name="weight" ></br>
+        <input type="submit" value="CALCULATE" class="btn btn-primary btn-lg" ></br></div>
     </form>
+</div>
+     </div>
     </body>
 </html>
