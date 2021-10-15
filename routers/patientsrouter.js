@@ -26,7 +26,7 @@ router.post("/BMI", async(req, res)=>{
     if ((Number(req.body.height)==NaN)||(Number(req.body.weight)==NaN))
     {return res.send("The Height and Weight have to be numbers")}
     let findData=await patient.find({name: req.body.name})
-    if (findData.length>0){return res.send("This person is already in the database")}
+    if (findData.length>0){return res.send("<h1>THIS PERSON IS ALREADY IN THE DATABASE. YOU CAN VIEW THE DATABASE FROM THE HOMEPAGE</h1>")}
     let bmi= Number(req.body.weight)/(Number(req.body.height)**2)
     let data= new patient({name: req.body.name, age: Number(req.body.age), weight: Number(req.body.weight), height: Number(req.body.height), bmi: bmi})
     await patient.create(data)
