@@ -2,13 +2,10 @@ const path= require("path")
 const express= require("express")
 const mongoose= require("mongoose")
 const patient=require("../models/patient")
-if (process.env.PORT){
 const DATABASE=("mongodb+srv://boboye:boboye@cluster0.r1cxf.mongodb.net/patients?retryWrites=true&w=majority")
-}
+mongoose.connect(DATABASE)
 
-else{
-    const DATABASE=("mongodb://localhost/Patients")
-}
+
 const router=express.Router()
 router.use(express.urlencoded({extended: false}))
 router.use(express.json())
