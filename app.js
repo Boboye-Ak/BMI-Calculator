@@ -6,7 +6,7 @@ const mongoose= require("mongoose")
 const app=express()
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
-const DATABASE=("mongodb://localhost/Patients")||("mongodb+srv://boboye:boboye@cluster0.r1cxf.mongodb.net/patients?retryWrites=true&w=majority")
+const DATABASE=("mongodb+srv://boboye:boboye@cluster0.r1cxf.mongodb.net/patients?retryWrites=true&w=majority")
 
 
 mongoose.connect(DATABASE)
