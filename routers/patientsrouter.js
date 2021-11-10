@@ -2,10 +2,9 @@ const path= require("path")
 const express= require("express")
 const mongoose= require("mongoose")
 const patient=require("../models/patient")
+const { appendFile } = require("fs")
 const DATABASE=("mongodb+srv://boboye:boboye@cluster0.r1cxf.mongodb.net/patients?retryWrites=true&w=majority")
 mongoose.connect(DATABASE)
-
-
 const router=express.Router()
 router.use(express.urlencoded({extended: false}))
 router.use(express.json())

@@ -2,29 +2,26 @@
     <head>
         <title>Delete Person Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/index.css" rel="stylesheet">
 
     </head>
     <body>
     <div class="container">  
-    <h1 class="page-header text-center bg-primary">THIS IS THE DELETE PERSON PAGE</h1><br/>
-    <div class="container">
-    <form action="/delete" method="post" target="answer">
-        <div class="form-group">
-        <label for="delete">Enter Name of who you want to delete: </label><input type="text" name="delete" class="form-control"><br/>
-        <input type="submit" class="btn btn-primary form-control" value="DELETE" >
-        </div>
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" name="answer"></iframe>
-        </div>
-    </form>
-        </div>
-        <div style="position:absolute; bottom:1%" class="container">
-            <form action="/" method="get">
-                <div><input type="submit" value="RETURN TO HOME" class="btn btn-primary btn-lg form-control"></div>
+    <h1 class="page-header1">THIS IS THE DELETE PERSON PAGE</h1><br/>
+    <form action="/delete" method="post" target="answer" class="form">
         
+        <input type="text" name="delete" placeholder="Enter Name of who you want to delete"><br/>
+        <input type="submit" value="DELETE" ><br/>
+        <iframe name="answer"></iframe><br/>
+        
+    </form>
+        
+        
+            <form action="/" method="get" class="form footer">
+                <input type="submit" value="RETURN TO HOME">
+            
             </form>
-        </div>
+        
     </div>
     
     </body>

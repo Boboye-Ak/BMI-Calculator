@@ -2,29 +2,22 @@
     <head>
         <title>Find Person Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./index.css" rel="stylesheet">
 
     </head>
     <body>
     <div class="container">   
-    <h1 class="page-header text-center bg-primary">THIS IS THE FIND PERSON PAGE</h1>
-    <div class="container">
-    <form action="/find" method="post" target="answer">
-        <div class="form-group">
-        <div class=""><label for="search">Enter Name of who you're searching for:</label><input type="text" name="search" class="form-control"></br>
-        <input type="submit" value="SEARCH" class="form-control btn btn-primary btn-lg" ><br/>
-        </div>
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" name="answer"></iframe>
-        </div>
+    <h1 class="page-header1">THIS IS THE FIND PERSON PAGE</h1>
+    <form action="/find" method="post" target="answer" class="form">
+        <input type="text" name="search" class="form-control" placeholder="Enter Name of who you're searching for"></br>
+        <input type="submit" value="SEARCH"><br/>
+        <iframe name="answer"></iframe>
+    </form>
+    <form action="/" method="get" class="form footer">
+        <input type="submit" value="RETURN TO HOME">
+    
     </form>
     </div>
-    <div style="position:absolute; bottom:1%" class="container">
-        <form action="/" method="get" >
-            <div ><input type="submit" value="RETURN TO HOME" class="btn btn-primary btn-lg form-control"></div>
-
-        </form>
-    </div>
-    </div>
+    
     </body>
 </html>

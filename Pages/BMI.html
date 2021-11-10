@@ -2,35 +2,33 @@
     <head>
         <title>BMI Homepage</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/index.css" rel="stylesheet">
 
     </head>
     <body>
     <div class="container">   
-    <h1 class="page-header text-center bg-primary">THIS IS THE BMI CALCULATOR</h1></br>
-    <div class="form-group">
-    <div class="container">
-    <form action="/BMI" method="post" target="answer">
-        <div class="form-group">
-        <label for="name">Name:</label><input type="text" name="name" class="form-control">
-        <label for="age">Age:</label><input type="number" name="age" class="form-control"></br>
-        <label for="height">Height(m):</label><input type="number" name="height" class="form-control" min="0" max="3" step="any"></br>
-        <label for="weight: ">Weight(kg):</label><input type="number" name="weight" min="0" step="any" class="form-control" ></br>
-        <div class= "text-center"><input type="submit" value="CALCULATE AND STORE" class=" btn btn-primary form-control" ></br></div>
-        </div>
+    <h1 class="page-header1">THIS IS THE BMI CALCULATOR</h1></br>
+    <form action="/BMI" method="post" target="answer" class="form">
+        <input type="text" name="name"  placeholder="Name"></br>
+        <input type="number" name="age" placeholder="age"></br>
+        <input type="number" name="height" class="form-control" min="0" max="3" step="any" placeholder="Height(m)"></br>
+        <input type="number" name="weight" min="0" step="any" class="form-control" placeholder="Weight(Kg)"></br>
+        <input type="submit" value="CALCULATE AND STORE"></br>
+        <iframe name="answer"></iframe>
     </form>
+
+        
+        
+        
+        
+        <form action="/" method="get" class="form footer">
+            <input type="submit" value="RETURN TO HOME">
+        
+        </form>
     </div>
 
-    <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" name="answer"></iframe>
-    </div>
-</div>
-<div style="position:absolute; bottom:0" class="container">
-    <form action="/" method="get">
-        <div><input type="submit" value="RETURN TO HOME" class="btn btn-primary btn-lg form-control"></div>
 
-    </form>
-</div>
-     </div>
+
+     
     </body>
 </html>
